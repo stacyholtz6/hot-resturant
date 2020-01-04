@@ -66,6 +66,7 @@
       for (var i = 0; i < response.length; i++) {
         var newDiv = $("<div>");
           newDiv.append("<h2>Table " + parseInt(i+1) + " | " + response[i].id);
+        newDiv.append("<h2>Table " + parseInt(i + 1) + " | " + response[i].id);
         $("#tableSection").append(newDiv);
       }
     });
@@ -78,6 +79,7 @@
       for (var i = 0; i < response.length; i++) {
         var newDiv = $("<div>");
           newDiv.append("<h2>Table " + parseInt(i+6) + " | " + response[i].id);
+        newDiv.append("<h2>Table " + parseInt(i + 6) + " | " + response[i].id);
         $("#waitlistSection").append(newDiv);
       }
     });
