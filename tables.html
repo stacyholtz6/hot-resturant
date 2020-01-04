@@ -62,19 +62,23 @@
     method: "GET"
   }).then(
     function (response) {
-      console.log (response);
-      for(var i=0; i<response.length; i++) {
-      $("#tableSection").append(response[i].id);
+      console.log(response);
+      for (var i = 0; i < response.length; i++) {
+        var newDiv = $("<div>");
+        newDiv.append("<h2>Table " + parseInt(i + 1) + " | " + response[i].id);
+        $("#tableSection").append(newDiv);
       }
     });
-    $.ajax({
+  $.ajax({
     url: "api/waiting",
     method: "GET"
   }).then(
     function (response) {
-      console.log (response);
-      for(var i=0; i<response.length; i++) {
-      $("#waitlistSection").append(response[i].id);
+      console.log(response);
+      for (var i = 0; i < response.length; i++) {
+        var newDiv = $("<div>");
+        newDiv.append("<h2>Table " + parseInt(i + 6) + " | " + response[i].id);
+        $("#waitlistSection").append(newDiv);
       }
     });
 </script>
