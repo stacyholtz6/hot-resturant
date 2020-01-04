@@ -63,9 +63,20 @@
   }).then(
     function (response) {
       console.log (response);
-    }
-
-  )
+      for(var i=0; i<response.length; i++) {
+      $("#tableSection").append(response[i].id);
+      }
+    });
+    $.ajax({
+    url: "api/waiting",
+    method: "GET"
+  }).then(
+    function (response) {
+      console.log (response);
+      for(var i=0; i<response.length; i++) {
+      $("#waitlistSection").append(response[i].id);
+      }
+    });
 </script>
 
 </html>

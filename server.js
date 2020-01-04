@@ -46,8 +46,11 @@ app.post("/api/tables", function (req, res) {
     var newTable = req.body
     if (tables.length<5) {
       tables.push(newTable);
+      res.send ("Reservation successfull!!");
     }else {
       waiting.push(newTable);
+      res.send("Sorry all tables booked. You have been placed on a waiting list");
+
     }
 });
 
