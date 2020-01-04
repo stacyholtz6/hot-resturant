@@ -55,7 +55,17 @@
       </div>
     </footer>
   </div>
-  <script src="server.js"></script>
 </body>
+<script type="text/javascript">
+  $.ajax({
+    url: "api/tables",
+    method: "GET"
+  }).then(
+    function (response) {
+      console.log (response);
+    }
+
+  )
+</script>
 
 </html>
