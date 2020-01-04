@@ -76,6 +76,10 @@ $(".submit").on("click", function(event) {
   $.post("/api/tables", newTable).then(function(data) {
     console.log(data);
    alert(data);
+   $("#reserve-name").val("");
+   $("#reserve-phone").val("");
+   $("#reserve-email").val("");
+   $("#reserve-unique-id").val("");
   });
 })
 </script>
